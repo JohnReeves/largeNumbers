@@ -5,15 +5,11 @@ demonstrate getting past 20 digit limit of c++ large numbers
 
 should give:
 
-'''
+```
 1234567890123456789-6101065172474983726
-
 1
-
 2
-
 6
-
 24
 
 120
@@ -50,7 +46,8 @@ should give:
 
 -4249290049419214848
 
-'''
+```
+
 Illustrating the rollover at 21-digits.
 
 ## needs an array or std::vector implementation
