@@ -3,6 +3,8 @@ demonstrate getting past 20 digit limit of c++ large numbers
 
 ## copy & past into yacc codepen
 
+here's mine: https://ideone.com/TmRptC
+
 should give:
 
 ```
@@ -33,8 +35,30 @@ should give:
 
 Illustrating the rollover at 21-digits.
 
-## needs an array or std::vector implementation
+## the 4 topics in computer science
 
-gmp is this sort of thing.
+### internal representation of numbers
+
+why is there a 20 digit limit?
+
+### representing numbers as strings
+
+how can you represent long numbers as string?
+
+writing a full class is *hard*, maybe 1000 lines.
+
+gmp is this sort of thing - so functions not operators.
+
+### approximations of pi
+
+how *can* you calculate pi?
+lot's of seriers solutions
+what about a randomised algorithm?
+
+### dynamic memory
+
+how can you grow your datatype?
+
+
 
 
