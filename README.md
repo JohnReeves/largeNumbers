@@ -1,11 +1,43 @@
-# largeNumbers
+# Large Numbers
 demonstrate getting past 20 digit limit of c++ large numbers
 
-## copy & past into yacc codepen
+## copy & paste into yet another codepen
 
-here's mine: https://ideone.com/TmRptC
+This code snippet outputs a list of factorials, as it gets past factorial(20) it makes a huge error!
 
-should give:
+```
+#include <iostream>
+
+using namespace std;
+
+long long factorial(long long N) {
+	long long temp;
+
+	if (N <= 1) return 1;
+	temp = N * factorial(N - 1);
+	return temp;
+}
+
+int main()
+{
+
+    int t;
+	long long int n,m;
+	
+	n=1234567890123456789;
+	m=12345678901234567890;
+    cout << n << m << endl;
+    
+    for(t=1; t <= 21; t++)
+        cout << factorial(t) << endl;
+
+    return 0;
+}
+```
+
+Here's mine: https://ideone.com/7AOT8G
+
+When you press run, it should give:
 
 ```
 1234567890123456789-6101065172474983726
@@ -39,25 +71,25 @@ Illustrating the rollover at 21-digits.
 
 ### internal representation of numbers
 
-why is there a 20 digit limit?
+Why is there a 20 digit limit?
 
 ### representing numbers as strings
 
-how can you represent long numbers as string?
+How can you represent long numbers as string?
 
-writing a full class is *hard*, maybe 1000 lines.
+Writing a full class is *hard*, maybe 1000 lines.
 
 gmp is this sort of thing - so functions not operators.
 
 ### approximations of pi
 
-how *can* you calculate pi?
-lot's of seriers solutions
-what about a randomised algorithm?
+How *can* you calculate pi?
+There are lot's of series solutions
+What about a randomised algorithm?
 
 ### dynamic memory
 
-how can you grow your datatype?
+How can you grow your datatype?
 
 
 
