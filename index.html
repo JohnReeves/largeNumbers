@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Large Numbers by JohnReeves</title>
+    <title>Largenumbers by JohnReeves</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -11,22 +11,56 @@
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">Large Numbers</h1>
+      <h1 class="project-name">Largenumbers</h1>
       <h2 class="project-tagline">demonstrate getting past 20 digit limit of c++ large numbers</h2>
+      <a href="https://github.com/JohnReeves/largeNumbers" class="btn">View on GitHub</a>
+      <a href="https://github.com/JohnReeves/largeNumbers/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/JohnReeves/largeNumbers/tarball/master" class="btn">Download .tar.gz</a>
     </section>
 
     <section class="main-content">
       <h1>
-<a id="largenumbers" class="anchor" href="#largenumbers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>largeNumbers</h1>
+<a id="large-numbers" class="anchor" href="#large-numbers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Large Numbers</h1>
 
 <p>demonstrate getting past 20 digit limit of c++ large numbers</p>
 
 <h2>
-<a id="copy--past-into-yacc-codepen" class="anchor" href="#copy--past-into-yacc-codepen" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>copy &amp; past into yacc codepen</h2>
+<a id="copy--paste-into-yet-another-codepen" class="anchor" href="#copy--paste-into-yet-another-codepen" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>copy &amp; paste into yet another codepen</h2>
 
-<p>here's mine: <a href="https://ideone.com/TmRptC">https://ideone.com/TmRptC</a></p>
+<p>This code snippet outputs a list of factorials, as it gets past factorial(20) it makes a huge error!</p>
 
-<p>should give:</p>
+<pre><code>#include &lt;iostream&gt;
+
+using namespace std;
+
+long long factorial(long long N) {
+    long long temp;
+
+    if (N &lt;= 1) return 1;
+    temp = N * factorial(N - 1);
+    return temp;
+}
+
+int main()
+{
+
+    int t;
+    long long int n,m;
+
+    n=1234567890123456789;
+    m=12345678901234567890;
+    cout &lt;&lt; n &lt;&lt; m &lt;&lt; endl;
+
+    for(t=1; t &lt;= 21; t++)
+        cout &lt;&lt; factorial(t) &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
+
+<p>Here's mine: <a href="https://ideone.com/7AOT8G">https://ideone.com/7AOT8G</a></p>
+
+<p>When you press run, it should give:</p>
 
 <pre><code>1234567890123456789-6101065172474983726
 1
@@ -61,28 +95,28 @@
 <h3>
 <a id="internal-representation-of-numbers" class="anchor" href="#internal-representation-of-numbers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>internal representation of numbers</h3>
 
-<p>why is there a 20 digit limit?</p>
+<p>Why is there a 20 digit limit?</p>
 
 <h3>
 <a id="representing-numbers-as-strings" class="anchor" href="#representing-numbers-as-strings" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>representing numbers as strings</h3>
 
-<p>how can you represent long numbers as string?</p>
+<p>How can you represent long numbers as string?</p>
 
-<p>writing a full class is <em>hard</em>, maybe 1000 lines.</p>
+<p>Writing a full class is <em>hard</em>, maybe 1000 lines.</p>
 
 <p>gmp is this sort of thing - so functions not operators.</p>
 
 <h3>
 <a id="approximations-of-pi" class="anchor" href="#approximations-of-pi" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>approximations of pi</h3>
 
-<p>how <em>can</em> you calculate pi?
-lot's of seriers solutions
-what about a randomised algorithm?</p>
+<p>How <em>can</em> you calculate pi?
+There are lot's of series solutions
+What about a randomised algorithm?</p>
 
 <h3>
 <a id="dynamic-memory" class="anchor" href="#dynamic-memory" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>dynamic memory</h3>
 
-<p>how can you grow your datatype?</p>
+<p>How can you grow your datatype?</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/JohnReeves/largeNumbers">Largenumbers</a> is maintained by <a href="https://github.com/JohnReeves">JohnReeves</a>.</span>
