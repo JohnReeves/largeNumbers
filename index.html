@@ -11,13 +11,21 @@
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">Large Numbers</h1>
-      <h2 class="project-tagline">Demonstrate what happens when you go past the 20 digit limit of c++ large numbers</h2>
+      <h1 class="project-name">Largenumbers</h1>
+      <h2 class="project-tagline">demonstrate getting past 20 digit limit of c++ large numbers</h2>
+      <a href="https://github.com/JohnReeves/largeNumbers" class="btn">View on GitHub</a>
+      <a href="https://github.com/JohnReeves/largeNumbers/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/JohnReeves/largeNumbers/tarball/master" class="btn">Download .tar.gz</a>
     </section>
 
     <section class="main-content">
       <h1>
-<a id="large-numbers" class="anchor" href="#large-numbers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a></h1>
+<a id="large-numbers" class="anchor" href="#large-numbers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Large Numbers</h1>
+
+<p>demonstrate getting past 20 digit limit of c++ large numbers</p>
+
+<h1>
+<a id="using-long-long-ints" class="anchor" href="#using-long-long-ints" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Using <code>long long</code> ints</h1>
 
 <h2>
 <a id="copy--paste-into-yet-another-codepen" class="anchor" href="#copy--paste-into-yet-another-codepen" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>copy &amp; paste into yet another codepen</h2>
@@ -84,13 +92,90 @@ int main()
 
 <p>Illustrating the rollover at 21-digits.</p>
 
+<h1>
+<a id="using-double-and-setprecision" class="anchor" href="#using-double-and-setprecision" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Using <code>double</code> and <code>setprecision</code>
+</h1>
+
+<pre><code>#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+
+using namespace std;
+
+double factorial(long long N) {
+    double temp;
+
+    if (N &lt;= 1) return 1;
+    temp = N * factorial(N - 1);
+    return temp;
+}
+
+int main()
+{
+
+    int t;
+    long long int n,m;
+
+    n=1234567890123456789;
+    m=12345678901234567890;
+    cout &lt;&lt; n &lt;&lt; m &lt;&lt; endl;
+
+    for(t=1; t &lt;= 30; t++)
+        cout &lt;&lt; setprecision(42) &lt;&lt; factorial(t) &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
+
+<p>Here's mine: <a href="https://ideone.com/7AOT8G">https://ideone.com/7AOT8G</a></p>
+
+<p>When you press run, it should give:</p>
+
+<pre><code>1234567890123456789-6101065172474983726
+1
+2
+6
+24
+120
+720
+5040
+40320
+362880
+3628800
+39916800
+479001600
+6227020800
+87178291200
+1307674368000
+20922789888000
+355687428096000
+6402373705728000
+121645100408832000
+2432902008176640000
+51090942171709440000
+1124000727777607680000
+25852016738884978212864
+620448401733239409999872
+15511210043330986055303168
+403291461126605650322784256
+10888869450418351940239884288
+304888344611713871918902804480
+8841761993739701898620088352768
+265252859812191068217601719009280
+
+</code></pre>
+
+<p>Illustrating something strange at the 22nd factorial but the difference is less understandable. </p>
+
 <h2>
 <a id="the-4-topics-in-computer-science" class="anchor" href="#the-4-topics-in-computer-science" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>the 4 topics in computer science</h2>
 
 <h3>
 <a id="internal-representation-of-numbers" class="anchor" href="#internal-representation-of-numbers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>internal representation of numbers</h3>
 
-<p>Why is there a 20 digit limit?</p>
+<ul>
+<li>Why is there a 20 digit limit for integers?</li>
+<li>Why does something strange happen in the middle for floats?</li>
+</ul>
 
 <h3>
 <a id="representing-numbers-as-strings" class="anchor" href="#representing-numbers-as-strings" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>representing numbers as strings</h3>
