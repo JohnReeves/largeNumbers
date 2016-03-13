@@ -142,7 +142,7 @@ When you press run, it should give:
 
 Illustrating something strange at the 22nd factorial but the difference is less understandable. 
 
-## the 4 topics in computer science
+## 4 topics in computer science
 
 ### internal representation of numbers
 
@@ -151,17 +151,15 @@ Illustrating something strange at the 22nd factorial but the difference is less 
 
 ### representing numbers as strings
 
-How can you represent long numbers as string?
+- How can you represent long numbers as string?
+- Writing a full class is *hard*, maybe 1000 lines.
+- The `gmp` library is this sort of thing - so functions not operators.
 
-Writing a full class is *hard*, maybe 1000 lines.
+### progressive approximations of pi
 
-gmp is this sort of thing - so functions not operators.
-
-### approximations of pi
-
-How *can* you calculate pi?
-There are lot's of series solutions
-What about a randomised algorithm?
+- How *can* you calculate pi?
+- There are lot's of series solutions
+- What about a randomised algorithm?
 
 ### dynamic memory
 
